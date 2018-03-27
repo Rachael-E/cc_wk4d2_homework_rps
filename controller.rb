@@ -3,6 +3,10 @@ require ('sinatra/contrib/all')
 
 require_relative ('./models/game')
 
+get '/' do
+  erb(:welcome)
+end
+
 get "/game/:hand1/:hand2" do
 
   game = Game.new()
